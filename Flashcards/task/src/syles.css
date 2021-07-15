@@ -1,0 +1,110 @@
+body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ec/World_Map_Blank.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes example {
+    to {transform: rotateY(180deg);}
+}
+
+@keyframes example2 {
+    to {transform: rotateY(360deg);}
+}
+
+@keyframes example3 {
+    from{transform: rotateY(180deg);}
+    to {transform: rotateY(0deg);}
+}
+
+@keyframes example4 {
+    from {transform: rotateY(180deg);}
+    to {transform: rotateY(180deg);}
+}
+
+.card-item:hover .front {
+
+    animation-name: example;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.card-item:hover .back {
+    animation-name: example2;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-family: 'Dela Gothic One', cursive;
+    font-size: large;
+    color: chocolate;
+    width: 150px;
+    height: 150px;
+    border: red solid 2px;
+    border-radius: 15px;
+    margin: 5px;
+    background-color: antiquewhite;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-family: 'Dela Gothic One', cursive;
+    font-size: large;
+    color: chocolate;
+    width: 150px;
+    height: 150px;
+    border: red solid 2px;
+    border-radius: 15px;
+    margin: 5px;
+    background-color: antiquewhite;
+    transform: rotateY(180deg);
+
+    backface-visibility: hidden;
+}
+
+
+.quiz-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.card-holder {
+    position: relative;
+}
+
+.quiz{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    margin: auto;
+}
+
+
+p {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
